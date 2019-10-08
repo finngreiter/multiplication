@@ -4,10 +4,18 @@ import time
 
 os.system('clear')
 
-tto = input("What would you like to practice? (2s, 4s, etc...): ")
+tto = input("What would you like to practice? (type r for random): ")
+if tto == "r":
+    rndum = True
+else:
+    rndum = False
 
-list_of_numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+list_of_numbers = list(range(1,13))
+list_of_numbers_dos = list(range(1,13))
+# print(list_of_numbers)
+# input()
 shuffle(list_of_numbers)
+shuffle(list_of_numbers_dos)
 # print(list_of_numbers)
 # input()
 score = 12
@@ -19,13 +27,18 @@ answer = ""
 cori = "Begin:"
 finndex = 0
 
+os.system("clear")
+
 for i in range(12):
     t0 = time.time()
-    os.system("clear")
+    # os.system("clear")
     print(cori)
     num1 = list_of_numbers[finndex]
     finndex += 1
-    num2 = int(tto)
+    if rndum == False:
+        num2 = int(tto)
+    else:
+        num2 = list_of_numbers_dos[finndex]
     together = num1 * num2
     answer = input(str(num1) + " X " + str(num2) + " = ")
     t1 = time.time()
