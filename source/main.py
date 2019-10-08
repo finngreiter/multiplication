@@ -58,3 +58,6 @@ try:
     print("Time: " + str(time_1) + "s")
 except KeyboardInterrupt:
     print("\nQuitting...")
+except ValueError:
+    print("Wrong input.")
+    pass
