@@ -1,4 +1,6 @@
 # multiplication
+![coolImage](./githubassets/chalkboard.png)
+
 A simple multiplication test tool.
 ## Instructions
 Clone this repo or download the latest release.
